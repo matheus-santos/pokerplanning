@@ -12,12 +12,16 @@ import { setRoomName } from "./redux/slices/roomSlice";
 import { addPlayer } from "./redux/slices/playersSlice";
 
 const App = () => {
+
+  // Selectors
   const players = useSelector((state) => state.players);
   const room = useSelector((state) => state.room);
   const count = useSelector((state) => state.counter.value);
 
+  // State
   const [tmpRoomName, setTmpRoomName] = useState("");
 
+  // Dispatch
   const dispatch = useDispatch();
 
   return (
